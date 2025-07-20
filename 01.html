@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>长征历史</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="css/01.css">
+    <script src="js/01.js" defer></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        red: {
+                            800: '#8C1515',
+                            900: '#6D1111'
+                        },
+                        gold: {
+                            400: '#F2C94C',
+                            500: '#F5D76E',
+                            600: '#F7DC6F'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        serif: ['Noto Serif SC', 'serif']
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-red-900 text-white font-serif overflow-x-hidden">
+<!-- 首页 -->
+<section id="home" class="min-h-screen flex flex-col items-center justify-center relative bg-red-900 overflow-hidden">
+    <div class="absolute inset-0 bg-pattern opacity-50"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-red-900/90 to-red-800/90"></div>
+
+    <div class="text-center z-10">
+        <h1 class="text-[clamp(2.5rem,8vw,5rem)] font-bold text-shadow mb-6 opacity-0 slide-up" style="animation-delay: 0.3s;">长征历史</h1>
+        <p class="text-[clamp(1rem,3vw,1.5rem)] max-w-2xl mx-auto mb-16 text-gold-400 opacity-0 slide-up" style="animation-delay: 0.6s;">
+            一段不朽的传奇，一次伟大的壮举
+        </p>
+
+        <button id="start-btn" class="bg-red-800 hover:bg-red-700 text-gold-400 font-bold py-6 px-16 rounded-full text-[clamp(1.2rem,4vw,2rem)] transition-all duration-300 ease-in-out shine-effect gold-glow transform hover:scale-105 focus:outline-none opacity-0 slide-up" style="animation-delay: 0.9s;">
+            回首长征史
+        </button>
+    </div>
+
+    <div class="absolute bottom-10 z-10 opacity-0 fade-in" style="animation-delay: 1.5s;">
+        <a href="#timeline" class="text-gold-400 hover:text-gold-500 transition-colors duration-300">
+            <i class="fa fa-angle-down text-3xl animate-bounce"></i>
+        </a>
+    </div>
+</section>
+
+<!-- 时间轴页面 -->
+<section id="timeline" class="min-h-screen bg-red-900 relative pt-20 pb-32">
+    <div class="absolute inset-0 bg-pattern opacity-30"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-red-900/80 to-red-800/80"></div>
+
+    <div class="container mx-auto px-4 relative z-10">
+        <h2 class="text-[clamp(2rem,6vw,3.5rem)] font-bold text-center mb-20 text-shadow fade-in">长征历史重大事件</h2>
+
+        <div class="relative timeline-container">
+            <div class="timeline-line"></div>
+
+            <!-- 事件1 -->
+            <div class="timeline-item flex items-center mb-24 md:mb-32">
+                <div class="timeline-point"></div>
+                <div class="md:w-1/2 md:pr-12 md:text-right order-2 md:order-1 mt-4 md:mt-0">
+                    <h3 class="text-2xl md:text-3xl font-bold text-gold-400 mb-2">中央红军开始长征</h3>
+                    <p class="text-xl mb-4">1934年10月</p>
+                    <p class="text-gray-200 max-w-lg md:ml-auto">由于第五次反“围剿”失败，中央红军（红一方面军）从江西瑞金、于都等地出发，开始战略转移，长征正式拉开序幕。</p>
+                    <button class="mt-4 text-gold-500 hover:text-gold-400 transition-colors duration-300 event-btn" data-event="1">
+                        了解更多 <i class="fa fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 事件2 -->
+            <div class="timeline-item flex items-center mb-24 md:mb-32">
+                <div class="timeline-point"></div>
+                <div class="md:w-1/2 md:pl-12 order-2">
+                    <h3 class="text-2xl md:text-3xl font-bold text-gold-400 mb-2">突破四道封锁线</h3>
+                    <p class="text-xl mb-4">1934年10月—12月</p>
+                    <p class="text-gray-200 max-w-lg">红军连续突破国民党军设置的四道封锁线，其中湘江战役（1934年11月27日—12月1日）最为惨烈，红军人数从出发时的8.6万人锐减至3万余人，成为促使红军调整战略的关键节点。</p>
+                    <button class="mt-4 text-gold-500 hover:text-gold-400 transition-colors duration-300 event-btn" data-event="2">
+                        了解更多 <i class="fa fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 事件3 -->
+            <div class="timeline-item flex items-center mb-24 md:mb-32">
+                <div class="timeline-point"></div>
+                <div class="md:w-1/2 md:pr-12 md:text-right order-2 md:order-1 mt-4 md:mt-0">
+                    <h3 class="text-2xl md:text-3xl font-bold text-gold-400 mb-2">遵义会议</h3>
+                    <p class="text-xl mb-4">1935年1月15日—17日</p>
+                    <p class="text-gray-200 max-w-lg md:ml-auto">会议纠正了“左”倾错误军事路线，确立了毛泽东在党中央和红军的领导地位，是中国共产党历史上生死攸关的转折点，标志着党开始走向成熟。</p>
+                    <button class="mt-4 text-gold-500 hover:text-gold-400 transition-colors duration-300 event-btn" data-event="3">
+                        了解更多 <i class="fa fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 事件4 -->
+            <div class="timeline-item flex items-center mb-24 md:mb-32">
+                <div class="timeline-point"></div>
+                <div class="md:w-1/2 md:pl-12 order-2">
+                    <h3 class="text-2xl md:text-3xl font-bold text-gold-400 mb-2">四渡赤水</h3>
+                    <p class="text-xl mb-4">1935年1月—3月</p>
+                    <p class="text-gray-200 max-w-lg">毛泽东指挥红军灵活机动，四渡赤水河，巧妙摆脱国民党军的围追堵截，是中国军事史上以少胜多的经典战例，彻底跳出了敌军包围圈。</p>
+                    <button class="mt-4 text-gold-500 hover:text-gold-400 transition-colors duration-300 event-btn" data-event="4">
+                        了解更多 <i class="fa fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 事件5 -->
+            <div class="timeline-item flex items-center mb-24 md:mb-32">
+                <div class="timeline-point"></div>
+                <div class="md:w-1/2 md:pr-12 md:text-right order-2 md:order-1 mt-4 md:mt-0">
+                    <h3 class="text-2xl md:text-3xl font-bold text-gold-400 mb-2">巧渡金沙江</h3>
+                    <p class="text-xl mb-4">1935年5月</p>
+                    <p class="text-gray-200 max-w-lg md:ml-auto">红军趁敌军防备松懈，以迅雷不及掩耳之势渡过金沙江，彻底摆脱了数十万国民党军的围追堵截，取得了战略转移中具有决定意义的胜利。</p>
+                    <button class="mt-4 text-gold-500 hover:text-gold-400 transition-colors duration-300 event-btn" data-event="5">
+                        了解更多 <i class="fa fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 事件6 -->
+            <div class="timeline-item flex items-center mb-24 md:mb-32">
+                <div class="timeline-point"></div>
+                <div class="md:w-1/2 md:pl-12 order-2">
+                    <h3 class="text-2xl md:text-3xl font-bold text-gold-400 mb-2">强渡大渡河、飞夺泸定桥</h3>
+                    <p class="text-xl mb-4">1935年5月</p>
+                    <p class="text-gray-200 max-w-lg">红军强渡大渡河（5月24日—25日）后，又以22人组成突击队飞夺泸定桥（5月29日），打破了蒋介石“让红军成为石达开第二”的企图。</p>
+                    <button class="mt-4 text-gold-500 hover:text-gold-400 transition-colors duration-300 event-btn" data-event="6">
+                        了解更多 <i class="fa fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 事件7 -->
+            <div class="timeline-item flex items-center mb-24 md:mb-32">
+                <div class="timeline-point"></div>
+                <div class="md:w-1/2 md:pr-12 md:text-right order-2 md:order-1 mt-4 md:mt-0">
+                    <h3 class="text-2xl md:text-3xl font-bold text-gold-400 mb-2">翻越夹金山</h3>
+                    <p class="text-xl mb-4">1935年6月</p>
+                    <p class="text-gray-200 max-w-lg md:ml-auto">中央红军翻越长征途中第一座大雪山——夹金山，与红四方面军在四川懋功（今小金县）会师（6月12日）。</p>
+                    <button class="mt-4 text-gold-500 hover:text-gold-400 transition-colors duration-300 event-btn" data-event="7">
+                        了解更多 <i class="fa fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 事件8 -->
+            <div class="timeline-item flex items-center mb-24 md:mb-32">
+                <div class="timeline-point"></div>
+                <div class="md:w-1/2 md:pl-12 order-2">
+                    <h3 class="text-2xl md:text-3xl font-bold text-gold-400 mb-2">过草地</h3>
+                    <p class="text-xl mb-4">1935年8月—9月</p>
+                    <p class="text-gray-200 max-w-lg">红军穿越松潘草地（位于四川、甘肃交界处），草地气候恶劣、沼泽密布，红军以顽强意志克服饥饿、严寒，最终走出绝境。</p>
+                    <button class="mt-4 text-gold-500 hover:text-gold-400 transition-colors duration-300 event-btn" data-event="8">
+                        了解更多 <i class="fa fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 事件9 -->
+            <div class="timeline-item flex items-center mb-24 md:mb-32">
+                <div class="timeline-point"></div>
+                <div class="md:w-1/2 md:pr-12 md:text-right order-2 md:order-1 mt-4 md:mt-0">
+                    <h3 class="text-2xl md:text-3xl font-bold text-gold-400 mb-2">红一方面军到达陕北</h3>
+                    <p class="text-xl mb-4">1935年10月</p>
+                    <p class="text-gray-200 max-w-lg md:ml-auto">中央红军抵达陕西吴起镇，与陕北红军胜利会师，标志着红一方面军长征结束，行程约二万五千里。</p>
+                    <button class="mt-4 text-gold-500 hover:text-gold-400 transition-colors duration-300 event-btn" data-event="9">
+                        了解更多 <i class="fa fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 事件10 -->
+            <div class="timeline-item flex items-center">
+                <div class="timeline-point"></div>
+                <div class="md:w-1/2 md:pl-12 order-2">
+                    <h3 class="text-2xl md:text-3xl font-bold text-gold-400 mb-2">三大主力会师</h3>
+                    <p class="text-xl mb-4">1936年10月</p>
+                    <p class="text-gray-200 max-w-lg">红二、四方面军到达甘肃会宁，与红一方面军胜利会师，宣告长征全面胜利，标志着中国工农红军战略转移的完成。</p>
+                    <button class="mt-4 text-gold-500 hover:text-gold-400 transition-colors duration-300 event-btn" data-event="10">
+                        了解更多 <i class="fa fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 事件详情模态框 -->
+<div id="event-modal" class="fixed inset-0 bg-black/80 z-50 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+    <div class="bg-red-800 rounded-lg shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto m-4 transform scale-95 transition-transform duration-300">
+        <div class="p-6 md:p-8">
+            <div class="flex justify-between items-start mb-6">
+                <h3 id="modal-title" class="text-3xl font-bold text-gold-400"></h3>
+                <button id="close-modal" class="text-white hover:text-gold-400 transition-colors duration-300">
+                    <i class="fa fa-times text-2xl"></i>
+                </button>
+            </div>
+            <div class="border-t border-gold-400/30 my-4"></div>
+            <div id="modal-content" class="text-gray-200 leading-relaxed text-lg"></div>
+            <div class="border-t border-gold-400/30 my-6"></div>
+            <div class="text-center">
+                <button id="close-modal-btn" class="bg-gold-500 hover:bg-gold-600 text-red-900 font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 focus:outline-none">
+                    返回时间轴
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 返回首页按钮 -->
+<button id="back-to-home" class="fixed bottom-6 right-6 bg-red-800 hover:bg-red-700 text-gold-400 font-bold py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105 focus:outline-none shadow-lg opacity-0 pointer-events-none z-40">
+    <i class="fa fa-home mr-2"></i> 返回首页
+</button>
+</body>
+</html>
